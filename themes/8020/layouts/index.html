@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="hero">
+  <h1>{{ .Site.Title }}</h1>
+  <p class="tagline">{{ .Site.Params.tagline }}</p>
+</div>
+
+<div class="wordcloud" id="wordcloud">
+  {{ $tags := .Site.Taxonomies.tags }}
+  {{ $max := 1 }}
+  {{ range $tags }}
+    {{ if gt (len .Pages) $max }}
+      {{ $max = len .Pages }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $name, $pages := $tags }}
+    {{ $count := len $pages }}
+    {{ $latest := (index $pages 0).Date.Format "2 Jan 2006" }}
+    {{ $size := add 1 (mul (div (float $count) (float $max)) 4) }}
+    <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/"
+       class="tag-word"
+       style="font-size: {{ printf "%.1f" $size }}rem;"
+       data-count="{{ $count }}"
+       data-latest="{{ $latest }}"
+       data-description="{{ with (index ($.Site.Data.tagmeta) $name) }}{{ .description }}{{ end }}">
+      {{ $name }}
+    </a>
+  {{ end }}
+
+  <a href="#" class="tag-word random-btn" id="random-btn"
+     style="font-size: 1.2rem;"
+     data-count="∞"
+     data-latest="now"
+     data-description="Take me somewhere unexpected">
+    ⟳ random
+  </a>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+(function() {
+  // Tooltip
+  const tooltip = document.getElementById('tooltip');
+  const words = document.querySelectorAll('.tag-word:not(.random-btn)');
+
+  words.forEach(word => {
+    word.addEventListener('mouseenter', (e) => {
+      const desc = word.dataset.description || word.textContent.trim();
+      const count = word.dataset.count;
+      const latest = word.dataset.latest;
+      tooltip.innerHTML = `<strong>${word.textContent.trim()}</strong><br>${count} post${count !== '1' ? 's' : ''} · latest: ${latest}${desc ? '<br><em>' + desc + '</em>' : ''}`;
+      tooltip.classList.add('visible');
+    });
+
+    word.addEventListener('mousemove', (e) => {
+      tooltip.style.left = e.pageX + 15 + 'px';
+      tooltip.style.top = e.pageY + 15 + 'px';
+    });
+
+    word.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('visible');
+    });
+  });
+
+  // Random post
+  const allPosts = [
+    {{ range where .Site.RegularPages "Section" "posts" }}
+    "{{ .RelPermalink }}",
+    {{ end }}
+  ];
+
+  document.getElementById('random-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (allPosts.length > 0) {
+      const idx = Math.floor(Math.random() * allPosts.length);
+      window.location.href = allPosts[idx];
+    }
+  });
+})();
+</script>
+{{ end }}

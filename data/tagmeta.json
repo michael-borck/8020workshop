@@ -1,0 +1,29 @@
+{
+  "printing": {
+    "description": "3D printer builds, mods, and restorations"
+  },
+  "astronomy": {
+    "description": "Telescopes, observatories, and dark skies"
+  },
+  "thinking": {
+    "description": "Philosophy, reflection, and the human side"
+  },
+  "nomad": {
+    "description": "Travel, experiences, and getting out there"
+  },
+  "80-20": {
+    "description": "The core philosophy: optimise what matters"
+  },
+  "klipper": {
+    "description": "Firmware conversions and configs for legacy printers"
+  },
+  "restomod": {
+    "description": "Modernising vintage printers with current tech"
+  },
+  "amalgam": {
+    "description": "The scavenge-able printer project"
+  },
+  "build123d": {
+    "description": "Parametric CAD design and Python scripting"
+  }
+}

@@ -1,0 +1,38 @@
+baseURL = 'https://8020workshop.com/'
+languageCode = 'en-au'
+title = 'The 80-20 Workshop'
+theme = '8020'
+
+[params]
+  description = "Optimised builds. Minimal waste. Maximum learning."
+  author = "Michael Borck"
+  tagline = "I go deep on whatever has my attention. The thread connecting it all is the 80-20 philosophy: focus on what matters, skip the rest."
+
+[params.footer]
+  links = [
+    { name = "michaelborck.dev", url = "https://michaelborck.dev" },
+    { name = "retroverse.com", url = "https://retroverse.com" },
+    { name = "The Amalgam", url = "https://theamalgam.org" },
+  ]
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]

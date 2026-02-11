@@ -1,0 +1,33 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment files
+.env
+.env.local
+
+# Node.js (if using Hugo Pipes with npm)
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.bak
+*.log

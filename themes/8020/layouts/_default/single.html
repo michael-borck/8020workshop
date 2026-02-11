@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="content-page single-post">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{ if not .Params.hideDate }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div class="post-tags">
+      {{ range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="post-tag">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="{{ .Site.BaseURL }}">&larr; back to the cloud</a>
+  </footer>
+</article>
+{{ end }}
