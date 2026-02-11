@@ -6,7 +6,7 @@ theme = '8020'
 [params]
   description = "Optimised builds. Minimal waste. Maximum learning."
   author = "Michael Borck"
-  tagline = "I go deep on whatever has my attention. The thread connecting it all is the 80-20 philosophy: focus on what matters, skip the rest."
+  tagline = "I go deep on whatever has my attention. The thread connecting it all is the 80-20 philosophy: 80% of the result from 20% of the effort — and for most of us, that's plenty."
 
 [params.footer]
   links = [
