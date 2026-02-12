@@ -11,8 +11,8 @@ theme = '8020'
 [params.footer]
   links = [
     { name = "michaelborck.dev", url = "https://michaelborck.dev" },
-    { name = "retroverse.com", url = "https://retroverse.com" },
-    { name = "The Amalgam", url = "https://theamalgam.org" },
+    { name = "retroverse.studio", url = "https://retroverse.studio" },
+    { name = "theAmalgam.com", url = "https://theamalgam.com" },
   ]
 
 [taxonomies]

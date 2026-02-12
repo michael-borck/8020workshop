@@ -4,6 +4,10 @@
   <p class="tagline">{{ .Site.Params.tagline }}</p>
 </div>
 
+<div class="surprise-box">
+  <a href="#" class="surprise-btn" id="random-btn">🎲 surprise me</a>
+</div>
+
 <div class="wordcloud" id="wordcloud">
   {{ $tags := .Site.Taxonomies.tags }}
   {{ $max := 1 }}
@@ -26,14 +30,6 @@
       {{ $name }}
     </a>
   {{ end }}
-
-  <a href="#" class="tag-word random-btn" id="random-btn"
-     style="font-size: 1.2rem;"
-     data-count="∞"
-     data-latest="now"
-     data-description="Take me somewhere unexpected">
-    ⟳ random
-  </a>
 </div>
 
 <div class="tooltip" id="tooltip"></div>
@@ -42,7 +38,7 @@
 (function() {
   // Tooltip
   const tooltip = document.getElementById('tooltip');
-  const words = document.querySelectorAll('.tag-word:not(.random-btn)');
+  const words = document.querySelectorAll('.tag-word');
 
   words.forEach(word => {
     word.addEventListener('mouseenter', (e) => {

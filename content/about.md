@@ -14,4 +14,4 @@ This site documents my experiments — not as an expert, but as someone learning
 **The 80-20 philosophy:** 80% of the results come from 20% of the effort — and for most of us, 80% is more than enough. You don't need a 12" dob when a 6" Newt shows you the same wonders. This applies to everything — printer builds, telescope setups, travel planning, life decisions.
 
 **Elsewhere:**
-[michaelborck.dev](https://michaelborck.dev) · [retroverse.com](https://retroverse.com)
+[michaelborck.dev](https://michaelborck.dev) · [retroverse.studio](https://retroverse.studio)
