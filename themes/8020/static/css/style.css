@@ -103,13 +103,14 @@ a:hover {
 }
 
 .search-container {
-  display: none;
-  max-width: 900px;
+  display: none !important;
+  max-width: 400px;
   margin: 1rem auto 0;
+  padding: 0 1rem;
 }
 
 .search-container.visible {
-  display: block;
+  display: block !important;
 }
 
 /* Pagefind dark theme overrides */
@@ -185,8 +186,10 @@ a:hover {
 
 /* ===== Surprise Button ===== */
 .surprise-box {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 1.5rem auto 0;
+  max-width: 800px;
 }
 
 .surprise-btn {
@@ -197,7 +200,6 @@ a:hover {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.2s ease;
-  display: inline-block;
 }
 
 .surprise-btn:hover {
