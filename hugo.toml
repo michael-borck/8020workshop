@@ -13,6 +13,7 @@ theme = '8020'
     { name = "michaelborck.dev", url = "https://michaelborck.dev" },
     { name = "retroverse.studio", url = "https://retroverse.studio" },
     { name = "theAmalgam.com", url = "https://theamalgam.com" },
+    { name = "source", url = "https://github.com/michael-borck/8020workshop" },
   ]
 
 [taxonomies]
