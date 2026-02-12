@@ -59,12 +59,24 @@ Standard editing keys work in the content area:
 ## Keyboard Shortcuts
 
 - `Ctrl+S` - Save post
+- `Ctrl+P` - Publish (save + git add/commit/push)
 - `Ctrl+G` - AI Generate (expand intro)
 - `Ctrl+I` - AI Improve (light editing)
 - `Ctrl+T` - AI Tags (suggest tags)
 - `Escape` - Close (return to menu)
 - `Ctrl+Q` - Quit application
 - `Tab` - Navigate between fields
+
+## Publishing
+
+The **Publish** button (or `Ctrl+P`) saves the post and runs:
+```bash
+git add content/posts/your-post.md
+git commit -m "Add post: Your Post Title"  # or "Update post:" for edits
+git push
+```
+
+The site auto-deploys via GitHub Actions after push.
 
 ## AI Prompts
 

@@ -4,6 +4,7 @@
 import json
 import os
 import re
+import subprocess
 from datetime import date
 from pathlib import Path
 
@@ -427,6 +428,7 @@ class EditorScreen(Screen):
 
     BINDINGS = [
         Binding("ctrl+s", "save", "Save"),
+        Binding("ctrl+p", "publish", "Publish"),
         Binding("ctrl+i", "do_improve", "AI Improve"),
         Binding("ctrl+g", "do_generate", "AI Generate"),
         Binding("ctrl+t", "do_suggest_tags", "AI Tags"),
@@ -481,6 +483,7 @@ class EditorScreen(Screen):
                 yield Button("AI Generate", id="generate-btn", variant="warning")
                 yield Button("AI Improve", id="improve-btn", variant="primary")
                 yield Button("Save", id="save-btn", variant="success")
+                yield Button("Publish", id="publish-btn", variant="primary")
                 yield Button("Close", id="close-btn", variant="default")
 
             # Status bar
@@ -726,6 +729,83 @@ tags: {tags_yaml}
             f.write(frontmatter)
 
         self.set_status(f"Saved: {filepath.name}")
+        return True  # Indicate success
+
+    @on(Button.Pressed, "#publish-btn")
+    def action_publish(self) -> None:
+        """Save and publish (git add, commit, push)."""
+        self.do_publish_work()
+
+    @work(thread=True)
+    def do_publish_work(self) -> None:
+        """Background worker for publishing."""
+        title = self.query_one("#title-input", Input).value.strip()
+        post_date = self.query_one("#date-input", Input).value.strip()
+        content = self.query_one("#content-area", TextArea).text.strip()
+
+        if not title or not content:
+            self.app.call_from_thread(self.set_status, "Title and content required", True)
+            return
+
+        # Determine filepath
+        if self.post_path:
+            filepath = self.post_path
+            is_new = False
+        else:
+            slug = slugify(title)
+            filepath = POSTS_PATH / f"{slug}.md"
+            is_new = True
+
+        # Build and save
+        tags_yaml = json.dumps(self.selected_tags) if self.selected_tags else "[]"
+        frontmatter = f'''---
+title: "{title}"
+date: {post_date}
+tags: {tags_yaml}
+---
+
+{content}
+'''
+        POSTS_PATH.mkdir(parents=True, exist_ok=True)
+        with open(filepath, "w") as f:
+            f.write(frontmatter)
+
+        self.post_path = filepath  # Remember for subsequent saves
+        self.app.call_from_thread(self.set_status, "Saved, publishing...")
+
+        # Git operations
+        try:
+            # git add
+            subprocess.run(
+                ["git", "add", str(filepath)],
+                cwd=PROJECT_ROOT,
+                check=True,
+                capture_output=True,
+            )
+
+            # git commit
+            action = "Add" if is_new else "Update"
+            commit_msg = f"{action} post: {title}"
+            subprocess.run(
+                ["git", "commit", "-m", commit_msg],
+                cwd=PROJECT_ROOT,
+                check=True,
+                capture_output=True,
+            )
+
+            # git push
+            subprocess.run(
+                ["git", "push"],
+                cwd=PROJECT_ROOT,
+                check=True,
+                capture_output=True,
+            )
+
+            self.app.call_from_thread(self.set_status, f"Published: {filepath.name}")
+
+        except subprocess.CalledProcessError as e:
+            error_msg = e.stderr.decode() if e.stderr else str(e)
+            self.app.call_from_thread(self.set_status, f"Git error: {error_msg[:50]}", True)
 
     @on(Button.Pressed, "#close-btn")
     def action_close(self) -> None:
