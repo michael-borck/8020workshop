@@ -1,9 +1,10 @@
 {{ define "main" }}
-<div class="hero">
-  <p class="tagline">{{ .Site.Params.tagline }}</p>
-</div>
+<div class="home-content">
+  <div class="hero">
+    <p class="tagline">{{ .Site.Params.tagline }}</p>
+  </div>
 
-<div class="wordcloud" id="wordcloud">
+  <div class="wordcloud" id="wordcloud">
   {{ $tags := .Site.Taxonomies.tags }}
   {{ $max := 1 }}
   {{ range $tags }}
@@ -27,7 +28,8 @@
   {{ end }}
 </div>
 
-<div class="tooltip" id="tooltip"></div>
+  <div class="tooltip" id="tooltip"></div>
+</div>
 
 <script>
 (function() {

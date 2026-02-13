@@ -46,6 +46,22 @@ a:hover {
   color: var(--fg-bright);
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Homepage layout - fill viewport dynamically */
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
 /* ===== Header ===== */
 .site-header {
   padding: 1.5rem 2rem;
@@ -134,7 +150,6 @@ a:hover {
 /* ===== Hero ===== */
 .hero {
   text-align: center;
-  padding: 3rem 2rem 1rem;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -158,8 +173,7 @@ a:hover {
 /* ===== Word Cloud ===== */
 .wordcloud {
   max-width: 800px;
-  margin: 2rem auto 4rem;
-  padding: 2rem;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -436,12 +450,8 @@ a:hover {
     margin-left: 0.75rem;
   }
 
-  .hero {
-    padding: 1.5rem 1rem 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 1.2rem;
+  .home-content {
+    padding: 1rem;
   }
 
   .tagline {
@@ -449,7 +459,6 @@ a:hover {
   }
 
   .wordcloud {
-    padding: 1rem;
     gap: 0.5rem 0.6rem;
   }
 
@@ -476,21 +485,5 @@ a:hover {
   .footer-links {
     flex-wrap: wrap;
     gap: 0.75rem;
-  }
-}
-
-/* ===== Desktop - fit homepage in viewport ===== */
-@media (min-width: 900px) {
-  .hero {
-    padding: 1.5rem 2rem 0.5rem;
-  }
-
-  .wordcloud {
-    margin: 1rem auto 1.5rem;
-    padding: 1rem;
-  }
-
-  .site-footer {
-    padding: 1rem 2rem;
   }
 }
