@@ -39,12 +39,6 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-links">
-      {{ range .Site.Params.footer.links }}
-        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-      {{ end }}
-    </div>
-    <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
     <div class="social-icons">
       {{ with .Site.Params.social.x }}
       <a href="{{ . }}" target="_blank" rel="noopener" aria-label="X (Twitter)">
@@ -81,7 +75,13 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 7A5.5 5.5 0 0 1 23 12.5 5.5 5.5 0 0 1 17.5 18H15v3a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-3H6.5A5.5 5.5 0 0 1 1 12.5 5.5 5.5 0 0 1 6.5 7h11zM6 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm4.5-2a1 1 0 0 0-1 1v1H8a1 1 0 0 0 0 2h1.5v1a1 1 0 0 0 2 0v-1H13a1 1 0 0 0 0-2h-1.5v-1a1 1 0 0 0-1-1zm7 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
       </a>
       {{ end }}
+      {{ with .Site.Params.social.amalgam }}
+      <a href="{{ . }}" target="_blank" rel="noopener" aria-label="theAmalgam.com">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 6h-2V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3zM9 4h6v2H9V4zm8 16H7v-2h10v2zm3-5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6zm-9-4H8v2h3v-2zm5 0h-3v2h3v-2z"/></svg>
+      </a>
+      {{ end }}
     </div>
+    <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
   </footer>
 </body>
 </html>
