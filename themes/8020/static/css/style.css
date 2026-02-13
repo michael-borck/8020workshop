@@ -89,7 +89,8 @@ a:hover {
   color: var(--fg-bright);
 }
 
-.search-toggle {
+.search-toggle,
+.random-btn {
   background: none;
   border: none;
   font-size: 1rem;
@@ -98,9 +99,11 @@ a:hover {
   padding: 0.2rem;
   opacity: 0.6;
   transition: opacity 0.2s;
+  text-decoration: none;
 }
 
-.search-toggle:hover {
+.search-toggle:hover,
+.random-btn:hover {
   opacity: 1;
 }
 
@@ -183,30 +186,6 @@ a:hover {
 
 .tag-word:hover {
   color: var(--fg-bright) !important;
-  background: #1a1a1a;
-}
-
-/* ===== Surprise Button ===== */
-.surprise-box {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem auto 0;
-  max-width: 800px;
-}
-
-.surprise-btn {
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  color: var(--fg-dim);
-  border: 1px dashed #333;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.surprise-btn:hover {
-  color: var(--fg-bright);
-  border-color: var(--fg-dim);
   background: #1a1a1a;
 }
 

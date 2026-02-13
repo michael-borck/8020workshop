@@ -3,10 +3,6 @@
   <p class="tagline">{{ .Site.Params.tagline }}</p>
 </div>
 
-<div class="surprise-box">
-  <a href="#" class="surprise-btn" id="random-btn">🎲 surprise me</a>
-</div>
-
 <div class="wordcloud" id="wordcloud">
   {{ $tags := .Site.Taxonomies.tags }}
   {{ $max := 1 }}
@@ -58,20 +54,6 @@
     });
   });
 
-  // Random post
-  const allPosts = [
-    {{ range where .Site.RegularPages "Section" "posts" }}
-    "{{ .RelPermalink }}",
-    {{ end }}
-  ];
-
-  document.getElementById('random-btn').addEventListener('click', (e) => {
-    e.preventDefault();
-    if (allPosts.length > 0) {
-      const idx = Math.floor(Math.random() * allPosts.length);
-      window.location.href = allPosts[idx];
-    }
-  });
 })();
 </script>
 {{ end }}

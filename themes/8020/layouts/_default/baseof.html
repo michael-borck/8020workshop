@@ -17,6 +17,7 @@
           <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
         {{ end }}
         <button class="search-toggle" id="search-toggle" aria-label="Search">🔍</button>
+        <a href="#" class="random-btn" id="random-btn" aria-label="Random post">🎲</a>
       </div>
     </nav>
     <div class="search-container" id="search-container">
@@ -30,6 +31,20 @@
       container.classList.toggle('visible');
       if (container.classList.contains('visible')) {
         container.querySelector('input')?.focus();
+      }
+    });
+
+    // Random post
+    var allPosts = [
+      {{ range where .Site.RegularPages "Section" "posts" }}
+      "{{ .RelPermalink }}",
+      {{ end }}
+    ];
+    document.getElementById('random-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (allPosts.length > 0) {
+        var idx = Math.floor(Math.random() * allPosts.length);
+        window.location.href = allPosts[idx];
       }
     });
   </script>
