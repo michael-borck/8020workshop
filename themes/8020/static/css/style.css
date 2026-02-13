@@ -162,7 +162,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 0.4rem 0.8rem;
+  gap: 0.8rem 1.2rem;
 }
 
 .tag-word {
