@@ -16,6 +16,13 @@ theme = '8020'
     { name = "source", url = "https://github.com/michael-borck/8020workshop" },
   ]
 
+[params.social]
+  x = "https://x.com/Michael_Borck"
+  linkedin = "https://linkedin.com/in/michaelborck"
+  github = "https://github.com/michael-borck"
+  youtube = "https://www.youtube.com/@8020workshop"
+  facebook = "https://www.facebook.com/michael.borck"
+
 [taxonomies]
   tag = "tags"
 

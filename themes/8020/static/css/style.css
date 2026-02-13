@@ -417,6 +417,27 @@ a:hover {
   color: #444;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.social-icons a {
+  color: #444;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: var(--fg-bright);
+}
+
+.social-icons svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   * {
