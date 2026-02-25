@@ -4,7 +4,6 @@ date: 2026-02-25
 tags: ["philosophy", "80-20", "maker", "workshop"]
 ---
 
-
 There's a misconception about the 80-20 principle that I want to clear up, because I've been guilty of misapplying it to myself.
 
 The Pareto principle says you can get 80% of the results from 20% of the input. Powerful idea. But here's what nobody talks about: **you have to pick your dimension.**

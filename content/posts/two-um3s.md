@@ -4,8 +4,6 @@ date: 2026-02-23
 tags: ["printing", "ultimaker", "80-20", "restoration", "marketplace"]
 ---
 
-# Two Ultimaker 3s, 30 Rolls of Filament, $150 AUD
-
 ## How a Facebook Marketplace Impulse Buy Turned Into the Perfect Specialist Machine
 
 *80-20 Workshop*
