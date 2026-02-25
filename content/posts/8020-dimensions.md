@@ -16,9 +16,7 @@ But that equation has a cost, and the cost is paid in a different currency: **ti
 
 Getting professional results from modest gear isn't magic. It demands deep learning, patient calibration, and genuine craft. The money you didn't spend gets replaced by hours at the workbench, by understanding your equipment at a level that most people with premium setups never bother to reach.
 
-This is the part that tripped me up. I tend to hyperfocus. When I'm deep in a project, it doesn't feel like 80-20 at all. It feels like 100% commitment, total immersion, every spare hour absorbed. I started wondering whether I was violating my own philosophy.
-
-I wasn't. I was *funding* it.
+I've [written before](/posts/hyperfocus-and-guilt/) about how this feels in practice — the guilt of going all-in on one project. But that deep investment isn't a violation of the philosophy. It's the currency that funds it.
 
 ## Pick Your Trade
 
