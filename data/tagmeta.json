@@ -37,5 +37,8 @@
   },
   "prusa": {
     "description": "Prusa printer builds, upgrades, and daily use"
+  },
+  "coding": {
+    "description": "Software projects, games, and open source"
   }
 }
