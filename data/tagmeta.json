@@ -25,5 +25,17 @@
   },
   "build123d": {
     "description": "Parametric CAD design and Python scripting"
+  },
+  "marketplace": {
+    "description": "Secondhand sourcing, deals, and buying smart"
+  },
+  "ultimaker": {
+    "description": "Ultimaker printer builds, mods, and dual extrusion"
+  },
+  "lulzbot": {
+    "description": "LulzBot printer restorations and modifications"
+  },
+  "prusa": {
+    "description": "Prusa printer builds, upgrades, and daily use"
   }
 }

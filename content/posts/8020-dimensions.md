@@ -1,7 +1,7 @@
 ---
 title: "You Can't 80-20 Everything (And That's the Point)"
 date: 2026-02-25
-tags: ["philosophy", "80-20", "maker", "workshop"]
+tags: ["thinking", "80-20"]
 ---
 
 There's a misconception about the 80-20 principle that I want to clear up, because I've been guilty of misapplying it to myself.

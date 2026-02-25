@@ -1,7 +1,7 @@
 ---
 title: "Deal Fever: The Cheapest Way to Waste Money"
 date: 2026-02-27
-tags: ["80-20", "marketplace", "philosophy", "thinking"]
+tags: ["80-20", "marketplace", "thinking"]
 ---
 
 A great deal on something you don't need isn't a great deal. It's clutter with a discount.

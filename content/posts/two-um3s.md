@@ -1,7 +1,7 @@
 ---
 title: "Two Ultimaker 3s, 30 Rolls of Filament, One Marketplace Listing"
 date: 2026-02-23
-tags: ["printing", "ultimaker", "80-20", "restoration", "marketplace"]
+tags: ["printing", "ultimaker", "80-20", "restomod", "marketplace"]
 ---
 
 There's a moment in every marketplace scroll where your brain does the math before your fingers can type "is this still available?" Two Ultimaker 3 printers. One standard, one Extended. Thirty rolls of filament. All from one listing.

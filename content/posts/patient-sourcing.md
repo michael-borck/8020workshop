@@ -1,7 +1,7 @@
 ---
 title: "Patient Sourcing: How to Find Deals Without Doom-Scrolling"
 date: 2026-02-26
-tags: ["80-20", "marketplace", "philosophy"]
+tags: ["80-20", "marketplace", "thinking"]
 ---
 
 The best deals I've found weren't found by scrolling. They were found by waiting.

@@ -1,7 +1,7 @@
 ---
 title: "Ultimaker 3 Teardown: What I Found Inside"
 date: 2026-02-24
-tags: ["printing", "ultimaker", "restoration"]
+tags: ["printing", "ultimaker", "restomod"]
 ---
 
 With both Ultimaker 3s on the bench, it's time to dig into what makes these machines tick — and what needs fixing.

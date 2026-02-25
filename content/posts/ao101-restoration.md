@@ -1,7 +1,7 @@
 ---
 title: "Bringing the LulzBot AO-101 Back to Life"
 date: 2026-02-10
-tags: ["printing", "restomod", "klipper"]
+tags: ["printing", "lulzbot", "restomod", "klipper"]
 ---
 
 The AO-101 arrived from Facebook Marketplace for less than the cost of a spool of filament. Missing the power supply, caked in old PLA, and running firmware from 2013. But the frame is solid aluminium extrusion and the motors still turn. That's all I need.
