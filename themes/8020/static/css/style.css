@@ -487,3 +487,38 @@ main {
     gap: 0.75rem;
   }
 }
+
+/* ASCII art hero images */
+.ascii-art {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.ascii-art pre {
+  display: inline-block;
+  text-align: left;
+  font-size: 0.55rem;
+  line-height: 1.2;
+  background: var(--bg);
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.ascii-art figcaption {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--fg-dim);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .ascii-art pre {
+    font-size: 0.4rem;
+    padding: 0.5rem;
+  }
+}

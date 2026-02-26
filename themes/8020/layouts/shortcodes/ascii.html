@@ -1,0 +1,7 @@
+{{ $name := .Get 0 }}
+{{ $caption := .Get 1 }}
+{{ $file := printf "static/ascii/%s.txt" $name }}
+<figure class="ascii-art">
+<pre>{{ readFile $file }}</pre>
+{{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
