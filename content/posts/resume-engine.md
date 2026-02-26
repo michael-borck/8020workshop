@@ -28,3 +28,5 @@ The same YAML file also feeds a FastAPI backend, so the resume is accessible pro
 ### The 80-20 Take
 
 The upfront investment was real. But now, updating my resume across six formats and a live API means editing one file. That's the 80-20 principle applied to maintenance: do the work once, in the right place, and let automation handle the rest.
+
+This is plain text infrastructure in practice — see [Plain Text Is Forever](/posts/plain-text-is-forever/) for the philosophy behind it.
