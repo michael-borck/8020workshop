@@ -29,7 +29,7 @@
         {{ range $name, $pages := $tags }}
           {{ $count := len $pages }}
           {{ $latest := (index $pages 0).Date.Format "2 Jan 2006" }}
-          {{ $size := add 1 (mul (div (float $count) (float $max)) 4) }}
+          {{ $size := add 0.85 (mul (div (float $count) (float $max)) 2) }}
           <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/"
              class="tag-word"
              style="font-size: {{ printf "%.1f" $size }}rem;"
