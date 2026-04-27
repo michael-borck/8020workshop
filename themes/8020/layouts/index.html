@@ -1,39 +1,54 @@
 {{ define "main" }}
 <div class="home-content">
-  <div class="hero">
-    <p class="tagline">{{ .Site.Params.tagline }}</p>
+  <p class="tagline">{{ .Site.Params.tagline }}</p>
+
+  <div class="home-grid">
+
+    <!-- Recent posts -->
+    <div class="recent">
+      <div class="section-label">Recent posts</div>
+      <div class="post-list">
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+        <a class="post-item" href="{{ .RelPermalink }}">
+          <span class="post-title">{{ .Title }}</span>
+          <span class="post-meta">{{ .Date.Format "2 Jan 2006" }}{{ with .Params.tags }} · {{ delimit (first 2 .) " · " }}{{ end }}</span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Tag cloud -->
+    <div class="tags-col">
+      <div class="section-label">Topics</div>
+      <div class="wordcloud" id="wordcloud">
+        {{ $tags := .Site.Taxonomies.tags }}
+        {{ $max := 1 }}
+        {{ range $tags }}
+          {{ if gt (len .Pages) $max }}{{ $max = len .Pages }}{{ end }}
+        {{ end }}
+        {{ range $name, $pages := $tags }}
+          {{ $count := len $pages }}
+          {{ $latest := (index $pages 0).Date.Format "2 Jan 2006" }}
+          {{ $size := add 1 (mul (div (float $count) (float $max)) 4) }}
+          <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/"
+             class="tag-word"
+             style="font-size: {{ printf "%.1f" $size }}rem;"
+             data-count="{{ $count }}"
+             data-latest="{{ $latest }}"
+             data-description="{{ with (index ($.Site.Data.tagmeta) $name) }}{{ .description }}{{ end }}">
+            {{ $name }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+
   </div>
-
-  <div class="wordcloud" id="wordcloud">
-  {{ $tags := .Site.Taxonomies.tags }}
-  {{ $max := 1 }}
-  {{ range $tags }}
-    {{ if gt (len .Pages) $max }}
-      {{ $max = len .Pages }}
-    {{ end }}
-  {{ end }}
-
-  {{ range $name, $pages := $tags }}
-    {{ $count := len $pages }}
-    {{ $latest := (index $pages 0).Date.Format "2 Jan 2006" }}
-    {{ $size := add 1 (mul (div (float $count) (float $max)) 4) }}
-    <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/"
-       class="tag-word"
-       style="font-size: {{ printf "%.1f" $size }}rem;"
-       data-count="{{ $count }}"
-       data-latest="{{ $latest }}"
-       data-description="{{ with (index ($.Site.Data.tagmeta) $name) }}{{ .description }}{{ end }}">
-      {{ $name }}
-    </a>
-  {{ end }}
-</div>
 
   <div class="tooltip" id="tooltip"></div>
 </div>
 
 <script>
 (function() {
-  // Tooltip with bounds checking
   const tooltip = document.getElementById('tooltip');
   const words = document.querySelectorAll('.tag-word');
 
@@ -62,7 +77,6 @@
       tooltip.classList.remove('visible');
     });
   });
-
 })();
 </script>
 {{ end }}
