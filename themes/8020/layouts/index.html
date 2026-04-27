@@ -33,12 +33,12 @@
 
 <script>
 (function() {
-  // Tooltip
+  // Tooltip with bounds checking
   const tooltip = document.getElementById('tooltip');
   const words = document.querySelectorAll('.tag-word');
 
   words.forEach(word => {
-    word.addEventListener('mouseenter', (e) => {
+    word.addEventListener('mouseenter', () => {
       const desc = word.dataset.description || word.textContent.trim();
       const count = word.dataset.count;
       const latest = word.dataset.latest;
@@ -47,8 +47,15 @@
     });
 
     word.addEventListener('mousemove', (e) => {
-      tooltip.style.left = e.pageX + 15 + 'px';
-      tooltip.style.top = e.pageY + 15 + 'px';
+      const pad = 15;
+      const tw = tooltip.offsetWidth;
+      const th = tooltip.offsetHeight;
+      let x = e.clientX + pad;
+      let y = e.clientY + pad;
+      if (x + tw > window.innerWidth - 8) x = e.clientX - tw - pad;
+      if (y + th > window.innerHeight - 8) y = e.clientY - th - pad;
+      tooltip.style.left = (x + window.scrollX) + 'px';
+      tooltip.style.top  = (y + window.scrollY) + 'px';
     });
 
     word.addEventListener('mouseleave', () => {
@@ -56,6 +63,41 @@
     });
   });
 
+  // Scatter placement on desktop
+  function scatterCloud() {
+    const cloud = document.getElementById('wordcloud');
+    const tags = Array.from(cloud.querySelectorAll('.tag-word'));
+    if (window.innerWidth < 700) {
+      cloud.classList.remove('scatter');
+      tags.forEach(t => { t.style.left = ''; t.style.top = ''; });
+      return;
+    }
+    const containerW = cloud.offsetWidth;
+    const containerH = Math.max(420, Math.round(containerW * 0.52));
+    cloud.style.height = containerH + 'px';
+    cloud.classList.add('scatter');
+    const placed = [];
+    const pad = 10;
+    tags.forEach(tag => {
+      const tw = tag.offsetWidth;
+      const th = tag.offsetHeight;
+      let x = pad, y = pad, attempts = 0;
+      const overlaps = (ax, ay) =>
+        placed.some(p => !(ax + tw + pad < p.x || p.x + p.w + pad < ax || ay + th + pad < p.y || p.y + p.h + pad < ay));
+      while (attempts < 200) {
+        x = Math.random() * (containerW - tw - pad * 2) + pad;
+        y = Math.random() * (containerH - th - pad * 2) + pad;
+        if (!overlaps(x, y)) break;
+        attempts++;
+      }
+      tag.style.left = x + 'px';
+      tag.style.top  = y + 'px';
+      placed.push({ x, y, w: tw, h: th });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', scatterCloud);
+  window.addEventListener('resize', scatterCloud);
 })();
 </script>
 {{ end }}

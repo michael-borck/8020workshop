@@ -203,6 +203,16 @@ main {
   background: #1a1a1a;
 }
 
+/* Scatter mode (desktop) */
+.wordcloud.scatter {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+.wordcloud.scatter .tag-word {
+  position: absolute;
+}
+
 /* ===== Tooltip ===== */
 .tooltip {
   position: absolute;

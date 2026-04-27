@@ -17,8 +17,8 @@
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>
         {{ end }}
-        <button class="search-toggle" id="search-toggle" aria-label="Search">🔍</button>
-        <a href="#" class="random-btn" id="random-btn" aria-label="Random post">🎲</a>
+        <button class="search-toggle" id="search-toggle" aria-label="Search" title="Search">🔍</button>
+        <a href="#" class="random-btn" id="random-btn" aria-label="Random post" title="Random post">🎲</a>
       </div>
     </nav>
     <div class="search-container" id="search-container">
