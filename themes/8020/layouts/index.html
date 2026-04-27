@@ -63,48 +63,6 @@
     });
   });
 
-  // Scatter placement on desktop
-  function scatterCloud() {
-    const cloud = document.getElementById('wordcloud');
-    const tags = Array.from(cloud.querySelectorAll('.tag-word'));
-    if (window.innerWidth < 700) {
-      cloud.classList.remove('scatter');
-      tags.forEach(t => { t.style.left = ''; t.style.top = ''; });
-      cloud.style.height = '';
-      return;
-    }
-
-    // Measure while still in flex layout (accurate dimensions)
-    const tagSizes = tags.map(t => ({ el: t, w: t.offsetWidth, h: t.offsetHeight }));
-
-    const containerW = cloud.offsetWidth;
-    const containerH = Math.max(560, Math.round(containerW * 0.7));
-    cloud.style.height = containerH + 'px';
-    cloud.classList.add('scatter');
-
-    const placed = [];
-    const edge = 4; // min distance from container walls
-
-    tagSizes.forEach(({ el, w, h }) => {
-      let bestX = edge, bestY = edge;
-      for (let i = 0; i < 400; i++) {
-        const x = Math.random() * Math.max(0, containerW - w - edge * 2) + edge;
-        const y = Math.random() * Math.max(0, containerH - h - edge * 2) + edge;
-        const clear = !placed.some(p =>
-          x < p.x + p.w && x + w > p.x && y < p.y + p.h && y + h > p.y
-        );
-        if (clear) { bestX = x; bestY = y; break; }
-        if (i === 0) { bestX = x; bestY = y; } // fallback: first attempt
-      }
-      el.style.left = bestX + 'px';
-      el.style.top  = bestY + 'px';
-      placed.push({ x: bestX, y: bestY, w, h });
-    });
-  }
-
-  scatterCloud();
-  window.addEventListener('load', scatterCloud);
-  window.addEventListener('resize', scatterCloud);
 })();
 </script>
 {{ end }}
