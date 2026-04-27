@@ -174,7 +174,7 @@ main {
 /* ===== Home grid ===== */
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 3rem;
   align-items: start;
 }
@@ -190,28 +190,29 @@ main {
   border-bottom: 1px solid #1e1e23;
 }
 
-.post-list { display: flex; flex-direction: column; }
+.home-grid .post-list { display: flex; flex-direction: column; gap: 0; }
 
-.post-item {
+.home-grid .post-item {
   display: flex;
   flex-direction: column;
-  padding: 0.85rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid #1e1e23;
   text-decoration: none;
   color: inherit;
+  grid-template-columns: unset;
 }
-.post-item:last-child { border-bottom: none; }
+.home-grid .post-item:last-child { border-bottom: none; }
 
-.post-title {
-  font-size: 0.88rem;
+.home-grid .post-title {
+  font-size: 0.92rem;
   color: var(--fg);
   font-weight: 500;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  line-height: 1.45;
 }
-.post-item:hover .post-title { color: var(--accent); }
+.home-grid .post-item:hover .post-title { color: var(--accent); }
 
-.post-meta {
+.home-grid .post-meta {
   font-size: 0.68rem;
   color: var(--fg-dim);
 }
