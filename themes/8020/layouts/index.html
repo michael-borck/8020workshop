@@ -70,29 +70,35 @@
     if (window.innerWidth < 700) {
       cloud.classList.remove('scatter');
       tags.forEach(t => { t.style.left = ''; t.style.top = ''; });
+      cloud.style.height = '';
       return;
     }
+
+    // Measure while still in flex layout (accurate dimensions)
+    const tagSizes = tags.map(t => ({ el: t, w: t.offsetWidth, h: t.offsetHeight }));
+
     const containerW = cloud.offsetWidth;
-    const containerH = Math.max(420, Math.round(containerW * 0.52));
+    const containerH = Math.max(560, Math.round(containerW * 0.7));
     cloud.style.height = containerH + 'px';
     cloud.classList.add('scatter');
+
     const placed = [];
-    const pad = 10;
-    tags.forEach(tag => {
-      const tw = tag.offsetWidth;
-      const th = tag.offsetHeight;
-      let x = pad, y = pad, attempts = 0;
-      const overlaps = (ax, ay) =>
-        placed.some(p => !(ax + tw + pad < p.x || p.x + p.w + pad < ax || ay + th + pad < p.y || p.y + p.h + pad < ay));
-      while (attempts < 200) {
-        x = Math.random() * (containerW - tw - pad * 2) + pad;
-        y = Math.random() * (containerH - th - pad * 2) + pad;
-        if (!overlaps(x, y)) break;
-        attempts++;
+    const edge = 4; // min distance from container walls
+
+    tagSizes.forEach(({ el, w, h }) => {
+      let bestX = edge, bestY = edge;
+      for (let i = 0; i < 400; i++) {
+        const x = Math.random() * Math.max(0, containerW - w - edge * 2) + edge;
+        const y = Math.random() * Math.max(0, containerH - h - edge * 2) + edge;
+        const clear = !placed.some(p =>
+          x < p.x + p.w && x + w > p.x && y < p.y + p.h && y + h > p.y
+        );
+        if (clear) { bestX = x; bestY = y; break; }
+        if (i === 0) { bestX = x; bestY = y; } // fallback: first attempt
       }
-      tag.style.left = x + 'px';
-      tag.style.top  = y + 'px';
-      placed.push({ x, y, w: tw, h: th });
+      el.style.left = bestX + 'px';
+      el.style.top  = bestY + 'px';
+      placed.push({ x: bestX, y: bestY, w, h });
     });
   }
 
