@@ -12,6 +12,14 @@ Personal site for The 80-20 Workshop. Built with [Hugo](https://gohugo.io/) and 
 hugo server -D
 ```
 
+Search uses Pagefind. The index only exists after a production build, so the search button hides itself under `hugo server`. To test search locally:
+
+```bash
+hugo && npx pagefind --site public && python3 -m http.server -d public 1313
+```
+
+The RSS feed builds to `/index.xml`. New posts appear there automatically.
+
 ## New post
 
 ```bash

@@ -12,7 +12,7 @@ theme = '8020'
   links = [
     { name = "michaelborck.dev", url = "https://michaelborck.dev" },
     { name = "retroverse.studio", url = "https://retroverse.studio" },
-    { name = "theAmalgam.com", url = "https://theamalgam.com" },
+    { name = "theamalgam.org", url = "https://theamalgam.org" },
     { name = "source", url = "https://github.com/michael-borck/8020workshop" },
   ]
 
@@ -24,7 +24,7 @@ theme = '8020'
   facebook = "https://www.facebook.com/michael.borck"
   michaelborck = "https://michaelborck.dev"
   retroverse = "https://retroverse.studio"
-  amalgam = "https://theamalgam.com"
+  amalgam = "https://theamalgam.org"
 
 [taxonomies]
   tag = "tags"
@@ -43,7 +43,7 @@ theme = '8020'
     weight = 2
 
 [outputs]
-  home = ["HTML"]
-  section = ["HTML"]
-  taxonomy = ["HTML"]
-  term = ["HTML"]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
