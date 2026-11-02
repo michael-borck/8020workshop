@@ -4,14 +4,10 @@ date: 2026-06-14
 tags: ["thinking", "80-20"]
 ---
 
-I have spent part of this year writing a book about using AI at work. The working title is The Human Edge, and the short version of it fits in one line. Everyone has the same AI tools now, so the edge is judgement.
+Before I act on something, I ask how much I should trust it and what a quick check would look like. The whole habit takes about ten seconds.
 
-That sounds like work talk. It is, mostly. But I keep catching the same habit at the bench and in the backyard, and it was there long before the book.
+With AI output it might mean opening the source data instead of forwarding a tidy summary. With a secondhand listing it means asking for a photo of the model plate. At the telescope it is a look through the eyepiece before I blame the collimation, and at the printer it is checking the belt before I rebuild the firmware config.
 
-The habit takes about ten seconds. Before I act on something, I ask how much I should trust it and what a quick check would look like. With AI output the check might be opening the source data instead of forwarding a tidy summary. With a Marketplace listing it is asking for a photo of the model plate. With a telescope it is a look through the eyepiece before I blame the collimation, and with a printer it is checking the belt before I rebuild the firmware config.
+Most of the mistakes I regret share one step. I skipped the check because the first answer looked complete. A polished AI report, a confident seller, a clean first layer. Each one looked finished, and that is why I stopped looking.
 
-The mistakes I regret usually share one step. I skipped the check because the first answer looked complete. A polished AI report, a confident seller, a clean first layer. Each one looked finished, and that is why I stopped looking.
-
-I am not going to turn this site into a series of lessons from the book. Wrong room for that. The book can live with the work stuff. I am writing this down here because the workshop taught me the habit first and the writing just gave it a name.
-
-I would rather spend ten seconds checking than an afternoon fixing what I trusted.
+I have been writing a book about AI at work this year, and this habit is the part of it that carried over to the bench. The book can stay with the work. The workshop taught me the habit first.
