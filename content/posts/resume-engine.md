@@ -10,16 +10,16 @@ I got tired of maintaining several versions of my resume. Every format, whether 
 
 Everything lives in a single YAML file: work history, skills, education, projects. One file, one place to update. Change a job title or add a project and every output picks it up.
 
-The core engine uses Quarto to generate PDF, HTML and presentation formats from that YAML source. The formats are the interesting part.
+The core engine uses Quarto to generate PDF, HTML and presentation formats from that YAML source. The formats are where most of the work went.
 
 ### The formats
 
-- **Quarto Academic.** Clean LaTeX-typeset personal website and portfolio. The serious version.
-- **Magazine.** Interactive magazine-style layout with page transitions. Vanilla JavaScript and CSS, no frameworks. Flip through it like a publication.
-- **Word Cloud.** Interactive word cloud visualisation with responsive design. A visual snapshot of what I do, weighted by experience.
-- **Quest.** An 8-bit card game that turns the resume into an explorable adventure. If someone is going to spend time reading my CV, they might as well have fun doing it.
+- **Quarto Academic.** Clean LaTeX-typeset personal website and portfolio. The formal one.
+- **Magazine.** A magazine-style layout with page transitions, built in vanilla JavaScript and CSS. Flip through it like a publication.
+- **Word Cloud.** A word cloud built from the same data.
+- **Quest.** An 8-bit card game version. Not the one I send to recruiters, but people do play it.
 - **Blog.** Jekyll-powered resume with articles, running on GitHub Pages.
-- **Standard.** PDF and HTML via Quarto. The one you would actually send to a recruiter.
+- **Standard.** PDF and HTML via Quarto. The one I send to recruiters.
 
 ### The API
 
@@ -27,6 +27,6 @@ The same YAML file feeds a FastAPI backend, so the resume is accessible programm
 
 ### The 80-20 take
 
-The upfront investment was real. Now updating my resume across six formats and a live API means editing one file. Do the work once, in the right place, and let automation handle the rest.
+The upfront investment was real. Now updating my resume across six formats and a live API means editing one file. I do the work once and let automation repeat it.
 
 This is plain text infrastructure in practice. See [Plain Text Is Forever](/posts/plain-text-is-forever/) for the philosophy.

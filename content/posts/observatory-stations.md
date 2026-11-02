@@ -24,8 +24,8 @@ Helios 102mm refractor on a CG-3 mount. The relaxed station. No cameras, no soft
 
 ### Station 5: "Outreach", hack scopes
 
-A 70mm travel scope and a 115mm Newtonian, both running AstroHopper push-to on stabilised mount hacks. Fitted with SVBONY aspheric eyepiece sets. These are the accessibility demonstration rigs, built to show that you don't need expensive GoTo systems to find objects in the sky. Star party ready.
+A 70mm travel scope and a 115mm Newtonian, both running AstroHopper push-to on stabilised mount hacks. Fitted with SVBONY aspheric eyepiece sets. These are the scopes I use to show people that you don't need expensive GoTo systems to find objects in the sky. I take them to star parties.
 
 ### The 80-20 take
 
-The whole fleet came secondhand for a fraction of retail. The real 80-20 is the specialisation rather than the price. Each station does one thing well instead of one station trying to do everything badly. Set them up, assign the night's targets, and let them run in parallel. Five scopes, five jobs, one clear sky.
+The whole fleet came secondhand for a fraction of retail. The specialisation matters more than the price. Each station does one thing well instead of one station trying to do everything badly. Set them up, assign the night's targets, and let them run in parallel.
