@@ -6,29 +6,29 @@ tags: ["thinking", "80-20"]
 
 *Part of the [Plain Text Is Forever](/posts/plain-text-is-forever/) series.*
 
-A `.txt` file from 1985 opens instantly on every device made since. A `.md` file written today will be readable in 2050 on hardware that doesn't exist yet. No proprietary format. No database locked inside an app you can't control. No sync service that decides your notes aren't worth hosting anymore.
+A `.txt` file from 1985 opens instantly on every device made since. A `.md` file written today will still be readable in 2050 on hardware that doesn't exist yet. No proprietary format, no database locked inside an app you can't control, no sync service that decides your notes aren't worth hosting.
 
-Plain text is the cockroach of file formats. It survives everything.
+Plain text survives everything.
 
-## Consider the Alternative
+## Consider the alternative
 
-Think about every format that didn't survive. WordStar documents. Lotus 1-2-3 spreadsheets. HyperCard stacks. Evernote's internal database. Google Notebook. Each one required a specific application to create, a specific application to read, and a migration strategy when that application disappeared.
+Think about the formats that didn't survive. WordStar documents. Lotus 1-2-3 spreadsheets. HyperCard stacks. Evernote's internal database. Google Notebook. Each one needed a specific application to create it, a specific application to read it, and a migration plan for when that application disappeared.
 
-Plain text required none of that then. It requires none of that now.
+Plain text needed none of that then. It needs none of that now.
 
-## The Compound Interest of Durability
+## The compound interest of durability
 
-Every year that passes, the value of a durable format increases. A note you wrote five years ago in plain text is still a note. A note you wrote five years ago in a discontinued app is an export you hope still works.
+Every year that passes increases the value of a durable format. A note you wrote five years ago in plain text is still a note. A note you wrote five years ago in a discontinued app is an export you hope still works.
 
-This isn't about being anti-technology. It's about recognising which layer of the stack deserves your trust. Applications are the paint. Plain text is the concrete.
+Applications are the paint. Plain text is the concrete.
 
-## The Portability Bonus
+## The portability bonus
 
-Durability and portability are the same bet. A file that opens everywhere today will open everywhere tomorrow. A file that requires a specific app today will require a replacement app tomorrow and a conversion tool the day after that.
+Durability and portability are the same bet. A file that opens everywhere today will open everywhere tomorrow. A file that needs a specific app today will need a replacement app tomorrow and a conversion tool the day after.
 
-When you store your thinking in plain text, you're not just preserving it. You're keeping it free. Free to move between devices, between operating systems, between decades.
+Storing your thinking in plain text preserves it and keeps it free to move between devices, operating systems and decades.
 
-That's a bet that always pays off.
+That is a bet that always pays off.
 
 ---
 

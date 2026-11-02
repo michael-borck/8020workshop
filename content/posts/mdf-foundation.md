@@ -8,4 +8,4 @@ Every legacy printer I restore gets mounted to an MDF baseboard before anything 
 
 18mm MDF. Cut all boards in one batch session. Drill brass standoff holes for the mainboard. Mount the PSU vertically on the back edge. Done.
 
-It's become my standard first step for every restomod build. The printer might change but the foundation stays the same.
+It's my standard first step for every restomod build.

@@ -6,33 +6,33 @@ tags: ["thinking", "80-20"]
 
 *Part of the [Plain Text Is Forever](/posts/plain-text-is-forever/) series.*
 
-The plain text ecosystem is enormous precisely because it doesn't lock you in. Obsidian users build knowledge graphs from Markdown files they fully own. Quarto users render those same Markdown files into websites, PDFs, and presentations. Logseq, Zettlr, iA Writer, Vim, VS Code, Notepad, even your phone's built-in editor: they all speak the same language.
+The plain text ecosystem is huge because it doesn't lock you in. Obsidian users build knowledge graphs from Markdown files they own. Quarto users render the same files into websites, PDFs and presentations. Logseq, Zettlr, iA Writer, Vim, VS Code, Notepad, even your phone's built-in editor all read the same language.
 
 Switch tools whenever you want. Your files don't care.
 
-## Format vs. Tool
+## Format or tool
 
-This is the critical difference between choosing a *tool* and choosing a *format*. Tools are temporary relationships. Plain text is infrastructure.
+Choosing a *tool* is different from choosing a *format*. Tools are temporary. Plain text is infrastructure.
 
-When you pick Notion, you're choosing a tool *and* a format. Your data lives in their database, rendered by their app, synced by their servers. When you pick a Markdown editor, you're choosing a tool but keeping the format open. Tomorrow you can swap the editor and everything still works.
+When you pick Notion, you choose a tool and a format. Your data lives in their database, rendered by their app, synced by their servers. When you pick a Markdown editor, you choose a tool and keep the format open. Tomorrow you can swap the editor and everything still works.
 
-One of these decisions is reversible. The other isn't — at least not cheaply.
+One of those decisions is reversible. The other isn't, at least not cheaply.
 
-## The Ecosystem Effect
+## The ecosystem effect
 
-Because plain text is universal, tools compete on experience rather than lock-in. This is good for you. Editors get better, faster, more thoughtful — because the moment they don't, you can leave without losing a single file.
+Because plain text is universal, tools compete on experience instead of lock-in. Editors get better and faster, because the moment they don't, you can leave without losing a file.
 
-Try doing that with a proprietary note-taking app. The export is always lossy. The structure never quite survives. The links break. The attachments end up in a folder you have to manually reconnect.
+Try that with a proprietary note-taking app. The export is lossy. The structure rarely survives. Links break. Attachments end up in a folder you have to reconnect by hand.
 
-With plain text, there's nothing to export. The files are already yours.
+With plain text there is nothing to export. The files are already yours.
 
-## Speed You Didn't Know You Were Missing
+## Speed
 
-There's a reason the plaintext productivity community keeps growing. When your system runs on text files, everything is fast. Opening a file is instant. Searching is instant. Grep finds anything across thousands of files in milliseconds. Git tracks every change you've ever made. Syncing is trivial because text files are tiny.
+Plain text is fast. Opening a file is instant. Searching is instant. Grep finds anything across thousands of files in milliseconds. Git tracks every change. Syncing is trivial because text files are tiny.
 
-Compare that to waiting for a bloated app to load, watching a spinner while your "cloud-first" notes sync, or clicking through seventeen menus to find a setting. Plain text removes all of that friction.
+Compare that to waiting for a bloated app to load, watching a spinner while your cloud-first notes sync, or clicking through seventeen menus to find a setting. Plain text removes that friction.
 
-The speed isn't a bonus. It's the reason people stay.
+Speed is why people stay.
 
 ---
 

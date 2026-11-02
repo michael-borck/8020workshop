@@ -4,8 +4,8 @@ date: 2026-02-05
 tags: ["astronomy", "80-20"]
 ---
 
-Over the past year I've assembled five telescope stations for roughly a third of what the gear would cost at retail. All through patient Facebook Marketplace hunting and knowing exactly what to look for.
+Over the past year I've assembled five telescope stations for roughly a third of what the gear would cost at retail, all through patient Facebook Marketplace hunting and knowing exactly what to look for.
 
-The secret isn't finding bargains. It's knowing which expensive features you can skip entirely (the 80-20 rule applies to telescopes just as much as everything else) and which cheap upgrades make a disproportionate difference.
+Knowing what to buy matters more than finding bargains. I skip expensive features I can live without, which in telescopes follows the same 80-20 rule as everything else, and look for cheap upgrades that make a disproportionate difference.
 
-This post covers my acquisition strategy, what I'd do differently, and the specific gear that punches above its weight.
+My acquisition strategy, what I'd do differently, and the specific gear that punches above its weight are below.
