@@ -12,4 +12,4 @@ This is the plain text series from earlier this year, played out at book scale. 
 
 Plain text also makes revision cheap. Moving a chapter is renaming files. Finding every place I used a term wrong is one search. The whole book fits in a backup so small it feels like a rounding error.
 
-I am not going to list the catalogue here. This site is the wrong room for a bookshop, and the books have their own home. I just like that the biggest things I make are built from the smallest, dullest files on the computer. Boring files, interesting books. That ratio suits me.
+I am not going to list the catalogue here. This site is the wrong room for a bookshop, and the books have their own home. I just like that the biggest things I make are built from the smallest, dullest files on the computer: boring files, interesting books.

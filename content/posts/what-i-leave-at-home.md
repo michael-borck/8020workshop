@@ -10,8 +10,8 @@ I leave the big mount at home unless the trip is only about imaging. It eats boo
 
 I leave most of the eyepiece case at home too. Two eyepieces and a Barlow. In the dark, with cold hands, nobody cycles through six focal lengths looking for a perfect view. You pick one, settle in, and your eyes do the adjusting.
 
-I leave the laptop in the car during the day and try to keep it there at night. Screens wreck night vision and pull your attention back to the world you drove four hours to escape. A paper chart and a red torch are slower, and slower is the point.
+I leave the laptop in the car during the day and try to keep it there at night. Screens wreck night vision and pull your attention back to the world you drove four hours to escape. A paper chart and a red torch are slower, and at night that suits me.
 
 What always comes is less exciting. Warmer clothes than I think I need. More water than seems sensible. A thermos, a head torch with a red mode, tape, cable ties, and a printed list on the dashboard so nothing important gets left in a paddock in the dark.
 
-Packing light is not about toughness. It is about setup time. The less I unpack, the sooner I am sitting in a chair looking up, which was the whole reason for the drive.
+Packing light is mostly about setup time. The less I unpack, the sooner I am sitting in a chair looking up, which was the whole reason for the drive.

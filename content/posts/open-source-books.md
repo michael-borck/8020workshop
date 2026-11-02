@@ -15,7 +15,7 @@ All seven are open source on GitHub, built with Quarto, and published as free KD
 
 ### The Python series
 
-- **Think Python, Direct AI.** A programming textbook that teaches Python and computational thinking with AI as a learning partner. The point is to let AI help you understand what your code does, not to let it write the code for you.
+- **Think Python, Direct AI.** A programming textbook that teaches Python and computational thinking with AI as a learning partner. The aim is for AI to help you understand what your code does, not to write the code for you.
 - **Code Python, Consult AI.** Python fundamentals framed around working with AI coding assistants. The goal is fluency, not dependency.
 - **Ship Python, Orchestrate AI.** The production side: testing, packaging, DevOps, documentation. How to get from "it works on my machine" to deployed and maintained, which is the part that separates a script from a project.
 

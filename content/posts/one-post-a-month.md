@@ -10,6 +10,6 @@ So the new rule here is one post a month. If a good month produces two or three 
 
 This site is the home for the personal stuff. Printers, telescopes, camping, plain text, whatever has my attention at home. The professional work has other homes and it can stay there. Mixing the two would spoil both. The consulting would get a story about a secondhand printer it does not need, and the printer would get a lesson about stakeholders it did not ask for.
 
-One post a month is also about all a reader needs from a site like this. I follow a few personal blogs that post rarely and I read every word. The ones that post daily, I skim and mostly skip. Scarcity is doing real work there.
+One post a month is also about all a reader needs from a site like this. I follow a few personal blogs that post rarely and I read every word. The ones that post daily, I skim and mostly skip. Posting less is part of why I read the ones I do.
 
-The point is a steady trickle. A record that a person did things, learned a bit, and wrote some of it down before he forgot.
+What I want is a steady trickle: a record that a person did things, learned a bit, and wrote some of it down before he forgot.
